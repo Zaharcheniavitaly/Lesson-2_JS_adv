@@ -16,6 +16,8 @@ class BasketList {
 
 		this.deleteProduct();
 
+		this.addProduct();
+
 		this.calcuTotalPrice();
 	}
 
@@ -57,12 +59,14 @@ class BasketList {
 		}
 	}
 
+	addProduct() {
+
+	}
 
 
 	deleteProduct() {
 
 	}
-
 
 
 	calcuTotalPrice() {
@@ -72,15 +76,11 @@ class BasketList {
 }
 
 
-
-
 class BasketItem extends ProductItem {
 	constructor(product) {
 		super(product);
 
-
 	}
-
 
 	render() {
 
@@ -99,12 +99,7 @@ class BasketItem extends ProductItem {
 	 `
 	}
 
-
-
 }
-
-
-
 
 const basket = new BasketList();
 
