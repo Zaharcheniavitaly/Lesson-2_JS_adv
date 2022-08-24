@@ -5,55 +5,56 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<link rel="stylesheet" href="css/gamburger.css">
+	<title>Gamburger</title>
 </head>
 
 <body>
 
 	<form name="" action="" id="form">
 		<fieldset>
-			<legend>Create Hamburger</legend>
+			<legend>Гамбургер</legend>
 			<div class="row">
-				<p>Choose Size</p>
+				<p>Выбрать размер</p>
 				<div class="radio-variant">
 					<input type="radio" name="size" id="small" value="small" checked />
-					<label for="small">Small</label>
+					<label for="small">Маленький</label>
 				</div>
 				<div class="radio-variant">
 					<input type="radio" name="size" id="large" value="large" />
-					<label for="large">Large</label>
+					<label for="large">Большой</label>
 				</div>
 			</div>
 			<div class="row additions">
-				<p>Additions</p>
+				<p>Начинка</p>
 				<div class="checkbox-variant">
 					<input type="checkbox" name="add" id="cheese" value="cheese" />
-					<label for="cheese">Cheese</label>
+					<label for="cheese">Сыр</label>
 				</div>
 				<div class="checkbox-variant">
 					<input type="checkbox" name="add" id="salad" value="salad" />
-					<label for="salad">Salad</label>
+					<label for="salad">Салат</label>
 				</div>
 				<div class="checkbox-variant">
 					<input type="checkbox" name="add" id="potato" value="potato" />
-					<label for="potato">Fried potato</label>
+					<label for="potato">Картофель</label>
 				</div>
 				<div class="checkbox-variant">
 					<input type="checkbox" name="add" id="onion" value="onion" />
-					<label for="onion">Onion</label>
+					<label for="onion">Приправа</label>
 				</div>
 				<div class="checkbox-variant">
 					<input type="checkbox" name="add" id="spice" value="spice" />
-					<label for="spice">Spice</label>
+					<label for="spice">Майонез</label>
 				</div>
 			</div>
 			<div class="submit">
-				<input type="submit" value="Make Order" />
+				<input type="submit" value="Заказать" />
 			</div>
 		</fieldset>
 		<br />
 		<div id="result">
-			<div><b>Стоимость:</b> <span id="price">0</span> тугриков</div>
+			<div><b>Стоимость:</b> <span id="price">0</span> рублей</div>
 			<div><b>Калорийность:</b> <span id="calories">0</span> кКал</div>
 		</div>
 	</form>
