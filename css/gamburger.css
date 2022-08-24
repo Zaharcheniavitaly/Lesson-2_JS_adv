@@ -10,6 +10,10 @@
 	margin: 15px auto 0;
 }
 
+.fieldset{
+	padding: 10px;
+}
+
 p {
 	margin-bottom: 8px;
 }
@@ -35,6 +39,7 @@ legend {
 
 input[type=submit] {
 	padding: 4px 15px 6px;
+	margin-bottom: 10px;
 }
 
 #message {
