@@ -6,6 +6,8 @@ class ProductList {
 		this.goods = [];
 		this._fetchProducts();//рекомендация, чтобы метод был вызван в текущем классе
 		this.render();//вывод товаров на страницу
+
+		this.calcuTotalPrice(); // общая сумма товаров
 	}
 
 	_fetchProducts() {
@@ -57,6 +59,25 @@ class ProductList {
 			//              block.innerHTML += item.render();
 		}
 	}
+
+	/**
+	 * метод суммирует все цены 
+	 * @returns возвращает итоговую сумму
+	 */
+	calcuTotalPrice() {
+		// let totalPrice = 0;
+		// for (let i = 0; i < this.goods.length; i++) {
+		// 	totalPrice += this.goods[i].price;
+		// }
+		// console.log(totalPrice);
+		// return totalPrice;
+
+		//	или так:
+
+		const totalPrice = this.goods.reduce((total, item) => total + item.price, 0);
+		console.log(totalPrice);
+	}
+
 }
 
 
@@ -81,4 +102,6 @@ class ProductItem {
 }
 
 let list = new ProductList();
+//list.calcuTotalPrice();
+//console.log(calcuTotalPrice.totalPrice);
 
