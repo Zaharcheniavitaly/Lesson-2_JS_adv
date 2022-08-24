@@ -78,8 +78,6 @@ class BasketItem extends ProductItem {
 	constructor(product) {
 		super(product);
 
-		this.title = product.title;
-		this.price = product.price;
 
 	}
 
