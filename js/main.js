@@ -102,6 +102,5 @@ class ProductItem {
 }
 
 let list = new ProductList();
-//list.calcuTotalPrice();
-//console.log(calcuTotalPrice.totalPrice);
+
 

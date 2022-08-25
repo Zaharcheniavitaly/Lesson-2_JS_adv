@@ -82,7 +82,6 @@ class BasketList {
 class BasketItem extends ProductItem {
 	constructor(product) {
 		super(product);
-
 	}
 
 	render() {
