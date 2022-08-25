@@ -11,55 +11,84 @@
 
 <body>
 
-	<form name="" action="" id="form">
-		<fieldset class="fieldset">
+	<form class=" fieldset container" name="" action="" id="hamburger-form">
+		<fieldset id="hamburger-fieldset" class="fieldset">
 			<legend>Гамбургер</legend>
 			<div class="row">
 				<p>Выбрать размер</p>
 				<div class="radio-variant">
-					<input type="radio" name="size" id="small" value="small" checked />
-					<label for="small">Маленький гамбургер</label>
+					<input type="radio" name="size" id="small" value="small" class="hamburger-input" data-price="50"
+						data-calories="20" checked />
+					<label for="small">Маленький</label>
 				</div>
 				<div class="radio-variant">
-					<input type="radio" name="size" id="large" value="large" />
-					<label for="large">Большой гамбургер</label>
+					<input type="radio" name="size" id="large" value="large" class="hamburger-input" data-price="100"
+						data-calories="40" />
+					<label for="large">Большой</label>
 				</div>
 			</div>
+
+
 			<div class="row additions">
 				<p>Начинка</p>
 				<div class="checkbox-variant">
-					<input type="checkbox" name="add" id="cheese" value="cheese" />
+					<input type="radio" name="add" id="cheese" value="cheese" class="hamburger-input" data-price="10"
+						data-calories="20" checked>
 					<label for="cheese">сыр</label>
 				</div>
+
 				<div class="checkbox-variant">
-					<input type="checkbox" name="add" id="salad" value="salad" />
+					<input type="radio" name="add" id="salad" value="salad" class="hamburger-input" data-price="20"
+						data-calories="5" />
 					<label for="salad">салат</label>
 				</div>
+
 				<div class="row checkbox-variant">
-					<input type="checkbox" name="add" id="potato" value="potato" />
+					<input type="radio" name="add" id="potato" value="potato" class="hamburger-input" data-price="15"
+						data-calories="10" />
 					<label for="potato">картофель</label>
 				</div>
+
 				<div class="checkbox-variant">
-					<input type="checkbox" name="add" id="onion" value="onion" />
+					<input type="checkbox" checked name="topings" id="seasoning" value="onion" class="hamburger-input"
+						data-price="15" data-calories="0">
 					<label for="onion">приправа</label>
 				</div>
+
 				<div class="checkbox-variant">
-					<input type="checkbox" name="add" id="spice" value="spice" />
-					<label for="spice">майонез</label>
+					<input type="checkbox" name="topings" id="mayonnaise" value="mayo" class="hamburger-input"
+						data-price="20" data-calories="5" />
+					<label for="mayonnaise">майонез</label>
 				</div>
 			</div>
-			<div class="submit">
-				<input type="submit" value="Заказать" />
-			</div>
+
+
 		</fieldset>
-		<br />
-		<div id="result">
-			<div><b>Стоимость:</b> <span id="price">0</span> рублей</div>
-			<div><b>Калорийность:</b> <span id="calories">0</span> кКал</div>
+		<br>
+
+		<h3 class="button__hamburger" id="check">Заказать</h3>
+
+		<br>
+		<div>
+			<div id="result"><b>Стоимость:</b> <span id="price">0</span> рублей <br>
+				<b>Калорийность:</b> <span id="calories">0</span> кКал
+			</div>
+
 		</div>
 	</form>
 
 	<script src="js/gamburger.js"></script>
+
+	<script>
+
+		window.onload = () => {
+			document.getElementById("check").addEventListener('click', () => {
+				let hamburger = new Hamburger('size', 'add', 'topings');
+				console.log(hamburger);
+				hamburger.showSum("#price", "#calories");
+			});
+		}
+	</script>
 
 </body>
 

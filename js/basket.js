@@ -8,15 +8,13 @@ class BasketList {
 
 		this.basket = [];
 
-
-
-		this.fetchProducts();
-
 		this.render();
 
 		this.deleteProduct();
 
 		this.addProduct();
+
+		this.changeProduct();
 
 		this.calcuTotalPrice();
 	}
@@ -67,6 +65,11 @@ class BasketList {
 	deleteProduct() {
 
 	}
+
+	changeProduct() {
+
+	}
+
 
 
 	calcuTotalPrice() {
