@@ -10,13 +10,14 @@ class BasketList {
 
 		this.render();
 
-		this.deleteProduct();
 
-		this.addProduct();
+		// this.deleteProduct();
 
-		this.changeProduct();
+		// this.addProduct();
 
-		this.calcuTotalPrice();
+		// this.changeProduct();
+
+		//	this.calcuTotalPrice();
 	}
 
 	fetchProducts() {
@@ -57,24 +58,22 @@ class BasketList {
 		}
 	}
 
-	addProduct() {
+	// addProduct() {
 
-	}
+	// }
 
 
-	deleteProduct() {
+	// deleteProduct() {
 
-	}
-
-	changeProduct() {
-
-	}
+	// }
+	// 	changeProduct() {
+	// }
 
 
 
-	calcuTotalPrice() {
+	// calcuTotalPrice() {
 
-	}
+	// }
 
 }
 
