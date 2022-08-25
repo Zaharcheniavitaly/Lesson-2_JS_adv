@@ -91,13 +91,7 @@ class BasketItem extends ProductItem {
 				<p>${this.title}</p>
 				<p>${this.price} $</p>
 	 		</div>
-
-	     <div class="basketTotal">
-				Товаров на сумму:
-				<span class="basketTotalValue">${this.totalPrice} $ </span>
-			</div>
-	
-	 `
+			`
 	}
 
 }
