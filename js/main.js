@@ -74,8 +74,8 @@ class ProductList {
 
 		//	или так:
 
-		const totalPrice = this.goods.reduce((total, item) => total + item.price, 0);
-		console.log(totalPrice);
+		const getSum = this.goods.reduce((total, item) => total + item.price, 0);
+		console.log(getSum);
 	}
 
 }
@@ -92,15 +92,17 @@ class ProductItem {
 
 		return `
 		        <div class="product-item">
-              <h3 class="product-title">${this.title}</h3>
-		        <img class="product-img" src="${this.img} alt="${this.title}">
-              <p class="product-price">${this.price.toLocaleString()} $</p>
-              <button data-productid="${this.id}" class="product__buy-btn">Купить</button>
-            </div>
+                 <h3 class="product-title">${this.title}</h3>
+		           <img class="product-img" src="${this.img} alt="${this.title}">
+                 <p class="product-price">${this.price.toLocaleString()} $</p>
+                 <button data-productid="${this.id}" class="product__buy-btn">Купить</button>
+              </div>
 				`
 	}
 }
 
 let list = new ProductList();
+list.render();
+list.getSum();
 
 
