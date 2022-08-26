@@ -56,6 +56,8 @@ label {
 }
 
 .button__hamburger{
+	font-size: 20;
+	font-weight: 700;
 	color: red;
 	padding: 10px 30px;
 	margin-bottom: 10px;
