@@ -74,8 +74,8 @@ class ProductList {
 
 		//	или так:
 
-		const getSum = this.goods.reduce((total, item) => total + item.price, 0);
-		console.log(getSum);
+		const totalPrice = this.goods.reduce((total, item) => total + item.price, 0);
+		console.log(totalPrice);
 	}
 
 }
@@ -103,6 +103,38 @@ class ProductItem {
 
 let list = new ProductList();
 list.render();
-list.getSum();
+
+
+
+class BasketList {
+
+	addProduct() {
+
+	}
+
+	removeProduct() {
+
+	}
+
+	changeProduct() {
+
+	}
+
+	render() {
+
+	}
+
+}
+
+
+class BasketItem {
+
+	render() {
+
+	}
+
+}
+
+
 
 
