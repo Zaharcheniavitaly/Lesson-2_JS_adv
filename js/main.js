@@ -1,4 +1,4 @@
-
+'use strict';
 
 class ProductList {
 	constructor(container = '.products') {
@@ -6,6 +6,8 @@ class ProductList {
 		this.goods = [];
 		this._fetchProducts();//рекомендация, чтобы метод был вызван в текущем классе
 		this.render();//вывод товаров на страницу
+
+		this.calcuTotalPrice(); // общая сумма товаров
 	}
 
 	_fetchProducts() {
@@ -57,6 +59,25 @@ class ProductList {
 			//              block.innerHTML += item.render();
 		}
 	}
+
+	/**
+	 * метод суммирует все цены 
+	 * @returns возвращает итоговую сумму
+	 */
+	calcuTotalPrice() {
+		// let totalPrice = 0;
+		// for (let i = 0; i < this.goods.length; i++) {
+		// 	totalPrice += this.goods[i].price;
+		// }
+		// console.log(totalPrice);
+		// return totalPrice;
+
+		//	или так:
+
+		const totalPrice = this.goods.reduce((total, item) => total + item.price, 0);
+		console.log(totalPrice);
+	}
+
 }
 
 
@@ -71,14 +92,49 @@ class ProductItem {
 
 		return `
 		        <div class="product-item">
-              <h3 class="product-title">${this.title}</h3>
-		        <img class="product-img" src="${this.img} alt="${this.title}">
-              <p class="product-price">${this.price.toLocaleString()} $</p>
-              <button data-productid="${this.id}" class="product__buy-btn">Купить</button>
-            </div>
+                 <h3 class="product-title">${this.title}</h3>
+		           <img class="product-img" src="${this.img} alt="${this.title}">
+                 <p class="product-price">${this.price.toLocaleString()} $</p>
+                 <button data-productid="${this.id}" class="product__buy-btn">Купить</button>
+              </div>
 				`
 	}
 }
 
 let list = new ProductList();
+list.render();
+
+
+
+class BasketList {
+
+	addProduct() {
+
+	}
+
+	removeProduct() {
+
+	}
+
+	changeProduct() {
+
+	}
+
+	render() {
+
+	}
+
+}
+
+
+class BasketItem {
+
+	render() {
+
+	}
+
+}
+
+
+
 
