@@ -66,7 +66,7 @@
 		</fieldset>
 		<br>
 
-		<h3 class="button__hamburger" id="check">Заказать</h3>
+		<button class="button__hamburger" id="check">Заказать</button>
 
 		<br>
 		<div>
@@ -82,7 +82,8 @@
 	<script>
 
 		window.onload = () => {
-			document.getElementById("check").addEventListener('click', () => {
+			document.getElementById("check").addEventListener('click', (event) => {
+				event.preventDefault();
 				let hamburger = new Hamburger('size', 'add', 'topings');
 				console.log(hamburger);
 				hamburger.showSum("#price", "#calories");
